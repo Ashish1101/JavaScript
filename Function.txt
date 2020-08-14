@@ -1,0 +1,88 @@
+//function in Javascript
+/* There are two types of function in JavaScript */
+
+//1 Function Declaration
+
+
+function Hello() {
+console.log('Hello world')
+}
+
+Hello();
+
+
+let Welcome = function () {
+console.log('Welcome')
+}
+
+Welcome()
+
+/* 1 is function declaration and second is function expresion
+Function declaration is a Global level function
+in script first this type of function load and initialize
+These function are also called block level function 
+We can use function declaration function before initialzing the
+they don't throw error */
+
+/* 2 is fucntion expression  they can and can not be 
+block level function it is better to use function expression when you are 
+working with condition and want a function */
+
+
+ //let age = prompt("Enter Your age")
+//  if(age < 18) {
+//    function undeAge() {
+//      alert("your are undeAge")
+//    }
+
+  
+
+//  } else {
+//    function overAge() {
+//      alert("you areoverAge")
+//    }
+//  }
+
+//  undeAge()
+//  undeAge()
+ /* we can not use underAge and overAge outside the if and else block
+ if we want to access them outside the if else block then we have to
+ use function express */
+
+//  let underAge;
+//  let overAge;
+
+//  if(age < 18) {
+//     underAge = function () {
+//      alert("your are undeAge")
+//    }
+
+
+/* Callback function -> A function whuch is called in another function
+as parameter is called callback function*/
+
+function User (name , age , cb) { 
+console.log('Hello' + "You are"+ age + "old")
+cb(name)
+}
+
+
+function getName(name) {
+console.log('Welcome' + name)
+};
+
+User("Ashish" , 20 , getName)
+
+//  } else {
+//     overAge = function() {
+//      alert("you areoverAge")
+//    }
+//  }
+
+// overAge();
+// underAge()
+
+/* now we can use them outside the block */
+
+
+
