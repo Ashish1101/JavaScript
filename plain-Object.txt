@@ -1,0 +1,104 @@
+//creating a new Object
+let user = new Object();
+
+
+//adding value to user object
+user = {
+  name : "Ashish",
+  age :"20",
+  "My-Address":"Gandhi Nagar"
+}
+
+//deleting property from a object 
+//after deleting property it will show undefined
+// delete user.age
+/*To access multiword property we have to use 
+square bracket notation
+user["My-Address"] like this
+ */
+
+const school = {
+  fee: 2500
+}
+
+//we can modify const object
+// school.fee = 26
+// console.log('Fee ' + school.fee)
+
+console.log("Hello " + user.name + " Your age is " + user.age)
+
+//we can also assign the property to a new variable
+
+let Age= user.age
+
+//we can use that latter to take value from user
+//Now if we want to access the property we can not get it from 
+//user.age instead it will store in Age
+
+// * Computed Property
+/* we can also addign value to object
+by square brackets and the property changes 
+as value changes */
+
+//let fruit = prompt("Which fruit to buy?", "apple");
+
+// let bag = {
+//   [fruit]: 5, // the name of the property is taken from the variable fruit
+// };
+
+//alert( bag.apple ); // 5 if fruit="apple"
+
+//creating a object with function
+
+function User(name , age , id) {
+   return {
+     name, 
+     age, 
+     id
+   }
+}
+
+let newUser = new User("Ashish" , 22 , 11815163);
+
+console.log('Hello ' + newUser.name + " ID : " + newUser.id )
+
+/* in operator return true if key is present in object */
+
+
+console.log("age" in newUser)
+
+/* iterate through Object -> for ... in Loop*/
+
+for (let key in newUser) {
+console.log(key) //throughthe key name
+console.log(newUser[key]) //shows values as well
+}
+
+//how to check if the object is empty or not
+function isEmpty(object) {
+   for (let prop in object)  {
+       return true
+   }
+   return false
+}
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+
+function total(obj) {
+  let sum = 0;
+  for (let value in obj) {
+
+    sum += obj[value]
+  }
+  return sum
+}
+console.log(total( salaries ))
+console.log(isEmpty(newUser))
+
+
+
+
