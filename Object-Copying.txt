@@ -1,0 +1,79 @@
+/* OBject variable  */
+
+//object variable do not store the actual object
+//but store only the address of that object
+
+let user = {
+  name : "Ashish"
+}
+
+let admin = user
+
+//if we change the property value in admin changes 
+//to bes seen in user also
+
+console.log(user === admin)
+//it shows true because they are reference of same object
+
+/* Can we create a duplicate object -> YES*/
+//we can clone it by iteration -> METHOD 1
+
+let clone = {};
+
+for (let key in user) {
+  clone[key] = user[key]
+}
+
+console.log(clone.name)
+
+console.log(clone === user)
+//false becase they are not reference
+
+clone.name = "Shivam";
+
+console.log(clone.name)
+console.log(user.name)
+
+//cloning will not change the real object
+
+//we can copy one object property to onther by 
+//Object.assign
+
+let react = {
+  height: "164",
+  name:"Shivam"
+}
+
+/* Object.assign(dest , {target objects as many}) */
+
+Object.assign(user , react)
+
+//if the property is already in the object it gets overrite
+
+console.log(user)
+
+//we can also clone object without for...in loop
+
+let cloneObj = Object.assign({} , user)
+console.log(cloneObj)
+console.log(cloneObj === user)
+///fasle because the are not referenced
+
+// {} in Object.assign indicates the destintion that is
+//cloneObj itself
+
+
+/* Nested Cloning */
+let nestedData =  {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+}
+
+let nested = Object.assign({} , nestedData)
+
+//if we want to do nested cloning then use
+//loadash deepCloing 
+
