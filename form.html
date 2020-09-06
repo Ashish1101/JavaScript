@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <title></title>
+<style>
+body {
+  background: white; /* try type yellow */
+  color: #323232;
+
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: Helvetica neue, roboto;
+}
+
+.container {
+  background: linear-gradient(to left , rgb(177, 23, 177) , rgb(71, 200, 218));
+}
+
+label {
+  font-size: 18px;
+  padding: 0px 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+input[type=text], input[type=email] , input[type=password] {
+  padding : 5px 20px;
+  margin: 5px 10px;
+}
+
+select {
+  padding : 5px 50px
+}
+
+button {
+  position: relative;
+  left : 40%;
+  margin-top: 20px;
+  padding : 5px 20px;
+  display: block;
+  background-color: black;
+  border : 0;
+  color : white;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <h2>Personal Details</h2>
+      <label>Name</label>
+      <input type="text" name="name" required /><br>
+      <label>Email</label>
+      <input type="email" name="email"  required/><br>
+       <label>Passw</label>
+      <input type="password" name="password" required/><br>
+      <label>
+        Gender
+      </label>
+      <input type="radio" value="male" />
+      <label>Male</label>
+       <input type="radio" value="female" />
+      <label>Female</label><br>
+      <label>Contact</label>
+      <input type="password" name="password" required/><br>
+      <h2>Educational Qualification</h2>
+      <label>Degree</label>
+      <select>
+        <option>B.Tech</option>
+          <option>Pharma</option>
+           <option>Physical</option>
+             <option>M.B.A</option>
+      </select><br>
+      <label>Hobbies</label>
+      <input type="radio" value="Playing chess" />
+      <label>Playing chess</label>
+      <input type="radio" value="Reading books" />
+      <label>Reading books</label>
+
+      <h2>Address</h2>
+      <textarea rows="7" cols="50"></textarea><br>
+      <label>Attach Resume</label>
+      <input type="file" /><br>
+      <button>Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
