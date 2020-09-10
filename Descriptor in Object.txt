@@ -1,0 +1,50 @@
+
+/* Descriptor in Javascript Object */
+
+//we can change the behaviour of the object property
+
+const user = {
+  name:"Ashish"
+}
+
+user.name = "shivam";
+
+console.log(user);
+//now the name has been changed but we can prvent that
+//there is a method for that
+
+const desc = Object.getOwnPropertyDescriptor(user , 'name');
+
+console.log(JSON.stringify(desc , null , 2))
+// {
+//   "value": "shivam",
+//   "writable": true,
+//   "enumerable": true,
+//   "configurable": true
+// }
+
+//writable is true thats why we are able to change the
+//property now if we make this false than it is read only
+
+//if we want to add property with all values falsey
+//and that property is not in the object yet
+// const admin = {}
+
+// Object.defineProperty(admin, "age", {value : "2"});
+
+// console.log(admin)
+
+//change the flags of property
+
+const admin = {
+  user: 'john'
+}
+//till now user property writable is true now we will change it
+
+Object.defineProperty(admin, "user", {
+  writable : false
+})
+
+admin.user = "pete"
+//now name will not change
+console.log(admin)
